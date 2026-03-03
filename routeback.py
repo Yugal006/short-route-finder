@@ -28,10 +28,10 @@ def calculate_time(distance_km, mode, custom_speed=None, graph=None, route=None)
 
     if mode == "train":
         # Updated train timing to better match Google Maps
-        WAIT = 5              # reduced wait time
-        CRUISE_SPEED = 35     # slightly faster
+        WAIT = 2              # reduced wait time
+        CRUISE_SPEED = 36     # slightly faster
         STATION_SPACING = 2.0 # km avg spacing
-        STOP_DELAY = 0.45      # min per stop dwell
+        STOP_DELAY = 0.40      # min per stop dwell
 
         stops = distance_km / STATION_SPACING
         run_time = (distance_km / CRUISE_SPEED) * 60
@@ -82,3 +82,4 @@ def get_route(graph, mode, origin, destination, speed=None):
         "time": round(total_time_minutes, 1)
 
     }
+
