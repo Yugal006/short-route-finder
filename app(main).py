@@ -79,7 +79,7 @@ with col1:
                 # 2️⃣ Compute midpoint and radius for graph download
                 midpoint = ((orig_coords[0] + dest_coords[0]) / 2,
                             (orig_coords[1] + dest_coords[1]) / 2)
-                radius_m = geodesic(orig_coords, dest_coords).meters / 2 + 6000  # add 2 km buffer
+                radius_m = geodesic(orig_coords, dest_coords).meters / 2 + 4500  # add 2 km buffer
 
                 # 3️⃣ Load graph depending on mode
                 if mode_name == "Train 🚆":
@@ -154,3 +154,4 @@ with col2:
         # Responsive map: width stretches to container (100%) and reasonable height
 
         st_folium(m, width="100%", height=400)
+
